@@ -15,9 +15,9 @@
           return obj;
         }
         
-        console.log(populateGet());
+        var query = populateGet();
         
-        //window.location = getQuery(link) + '?30130&CAM=' + getQuery(campaign).toUpperCase() + '&shellon&btn=g&txt=b&shownone&navoff';
+        window.location = query.link + '?30130&CAMPAIGN=' + query.campaign.toUpperCase() + '&shellon&btn=g&txt=b&shownone&navoff';
     </script>
 </body>
 </html>
