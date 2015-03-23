@@ -6,22 +6,18 @@
 </head>
 <body>
     <script>
-        var getQuery = function( queryString ) {
-            var params = {}, queries, temp, i, l;
-         
-            // Split into key/value pairs
-            queries = queryString.split("&");
-         
-            // Convert the array of strings into an object
-            for ( i = 0, l = queries.length; i < l; i++ ) {
-                temp = queries[i].split('=');
-                params[temp[0]] = temp[1];
-            }
-         
-            return params;
-        };
+        <script>
+        function populateGet() {
+          var obj = {}, params = location.search.slice(1).split('&');
+          for(var i=0,len=params.length;i<len;i++) {
+            var keyVal = params[i].split('=');
+            obj[decodeURIComponent(keyVal[0])] = decodeURIComponent(keyVal[1]);
+          }
+          return obj;
+        }
+        </script>
         
-        console.log(getQuery('hello'));
+        console.log(populateGet());
         
         //window.location = getQuery(link) + '?30130&CAM=' + getQuery(campaign).toUpperCase() + '&shellon&btn=g&txt=b&shownone&navoff';
     </script>
