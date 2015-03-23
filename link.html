@@ -7,8 +7,9 @@
 <body>
     <script>
         var url = document.URL;
-        var hash = url.substring(url.indexOf("=")+1);
-        window.location = hash + '?30130&CAM=MAXIMUS&shellon&btn=g&txt=b&shownone&navoff';
+        var link = url.substr(url.indexOf("#")+1, url.indexOf("?")-1);
+        var campaign = url.substring(url.indexOf("?")+1);
+        window.location = hash + '?30130&' + campaign + '&shellon&btn=g&txt=b&shownone&navoff';
     </script>
 </body>
 </html>
