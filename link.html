@@ -6,7 +6,6 @@
 </head>
 <body>
     <script>
-        <script>
         function populateGet() {
           var obj = {}, params = location.search.slice(1).split('&');
           for(var i=0,len=params.length;i<len;i++) {
@@ -15,7 +14,6 @@
           }
           return obj;
         }
-        </script>
         
         console.log(populateGet());
         
