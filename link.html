@@ -8,6 +8,9 @@
     <script>
         function populateGet() {
           var obj = {}, params = location.search.slice(1).split('&');
+          
+          console.log(obj);
+          
           for(var i=0,len=params.length;i<len;i++) {
             var keyVal = params[i].split('=');
             obj[decodeURIComponent(keyVal[0])] = decodeURIComponent(keyVal[1]);
@@ -17,7 +20,7 @@
         
         var query = populateGet();
         
-        window.location = query.link + '?30130&CAMPAIGN=' + query.campaign.toUpperCase() + '&shellon&btn=g&txt=b&shownone&navoff';
+        //window.location = query.link + '?30130&CAMPAIGN=' + query.campaign.toUpperCase() + '&shellon&btn=g&txt=b&shownone&navoff';
     </script>
 </body>
 </html>
