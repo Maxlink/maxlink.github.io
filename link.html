@@ -9,7 +9,7 @@
         function populateGet() {
           var obj = {}, params = location.search.slice(1).split('.html&');
           
-          console.log(location.search.slice(1));
+          console.log(location.search.slice(1).split('l&c'));
           
           for(var i=0,len=params.length;i<len;i++) {
             var keyVal = params[i].split('=');
